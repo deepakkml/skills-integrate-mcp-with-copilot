@@ -21,13 +21,51 @@
         </div>
       </section>
 
+      <section id="auth-container">
+        <div id="auth-status" class="auth-box hidden">
+          <p>Logged in as <strong id="current-user"></strong></p>
+          <p>Role: <span id="current-role"></span></p>
+          <button id="logout-button" class="secondary">Logout</button>
+        </div>
+
+        <div id="login-forms" class="auth-box">
+          <div class="auth-panel">
+            <h3>Login</h3>
+            <form id="login-form">
+              <div class="form-group">
+                <label for="login-email">Email:</label>
+                <input type="email" id="login-email" required placeholder="your-email@mergington.edu" />
+              </div>
+              <div class="form-group">
+                <label for="login-password">Password:</label>
+                <input type="password" id="login-password" required placeholder="password" />
+              </div>
+              <button type="submit">Log In</button>
+            </form>
+          </div>
+
+          <div class="auth-panel">
+            <h3>Register</h3>
+            <form id="register-form">
+              <div class="form-group">
+                <label for="register-email">Email:</label>
+                <input type="email" id="register-email" required placeholder="your-email@mergington.edu" />
+              </div>
+              <div class="form-group">
+                <label for="register-password">Password:</label>
+                <input type="password" id="register-password" required placeholder="password" />
+              </div>
+              <button type="submit">Register</button>
+            </form>
+          </div>
+        </div>
+
+        <div id="auth-message" class="hidden"></div>
+      </section>
+
       <section id="signup-container">
         <h3>Sign Up for an Activity</h3>
         <form id="signup-form">
-          <div class="form-group">
-            <label for="email">Student Email:</label>
-            <input type="email" id="email" required placeholder="your-email@mergington.edu" />
-          </div>
           <div class="form-group">
             <label for="activity">Select Activity:</label>
             <select id="activity" required>
@@ -38,6 +76,30 @@
           <button type="submit">Sign Up</button>
         </form>
         <div id="message" class="hidden"></div>
+      </section>
+
+      <section id="admin-container" class="hidden">
+        <h3>Admin: Create Activity</h3>
+        <form id="create-activity-form">
+          <div class="form-group">
+            <label for="new-name">Activity Name:</label>
+            <input type="text" id="new-name" required placeholder="New activity name" />
+          </div>
+          <div class="form-group">
+            <label for="new-description">Description:</label>
+            <textarea id="new-description" required placeholder="Activity details"></textarea>
+          </div>
+          <div class="form-group">
+            <label for="new-schedule">Schedule:</label>
+            <input type="text" id="new-schedule" required placeholder="Mondays 3pm - 4pm" />
+          </div>
+          <div class="form-group">
+            <label for="new-max">Max Participants:</label>
+            <input type="number" id="new-max" required min="1" value="15" />
+          </div>
+          <button type="submit">Create Activity</button>
+        </form>
+        <div id="create-message" class="hidden"></div>
       </section>
     </main>
 
